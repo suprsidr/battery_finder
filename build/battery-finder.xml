@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:pr="http://www.alfresco.org/alfresco/pr" xmlns:fn="http://www.w3.org/2005/02/xpath-functions">
+<header>
+<rcicomponent name="BreadcrumbPageTitle"><![CDATA[Battery Finder]]></rcicomponent>
+<rcicomponent name="PageTitle"><![CDATA[Battery Finder]]></rcicomponent>
+<rcicomponent name="SeoMetaDescription"><![CDATA[]]></rcicomponent>
+<rcicomponent name="SeoMetaKeywords"><![CDATA[]]></rcicomponent>
+</header>
+<body>
+<rcicomponent name="BodyContent">
+<![CDATA[
+  <link rel="stylesheet" href="/static/pages/resource-center/css/battery-finder.min.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css"/>
+  <style>.battery-filters, .socket {font-size: 16px; padding-top: 1em; padding-bottom: 1em;}</style>
+  <div id="batteryfinder">
+    <div class="row">
+      <div class="battery-glam">
+        <img src="http://s7d5.scene7.com/is/image/horizonhobby/battery%2Dfinder%2Dglam?$Default$" alt=""/>
+        <div>
+          <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PaPpRaJrzyI" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row battery-filters">
+    </div>
+    <div class="row">
+      <div class="small-12 columns text-center results-count">
+      </div>
+      <div class="small-12 columns socket"></div>
+    </div>
+    <div class="row text-center" style="padding: 1rem;">
+      <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 e-spot-section"></ul>
+    </div>
+  </div>
+  <script>
+    (function($) {
+      $.when(
+        $.getScript("//cdn.jsdelivr.net/lodash/2.2.1/lodash.compat.js"),
+        $.getScript("/static/pages/resource-center/js/jquery.qtip.min.js"),
+        $.getScript("/static/pages/resource-center/js/jquery.dataTables.min.js"),
+        $.getScript("/static/pages/resource-center/js/minimongo.min.js"),
+        $.Deferred(function(deferred){
+          $(deferred.resolve);
+        })
+      ).done(function(){
+        $.getScript( "/static/pages/resource-center/js/battery-finder.min.js" )
+      });
+      function shuffle(r){for(var f,n,o=r.length;0!==o;)n=Math.floor(Math.random()*o),o-=1,f=r[o],r[o]=r[n],r[n]=f;return r}
+      var arr = ['AIRPLANES', 'BOAT', 'MULTIROTOR', 'RADIOS', 'SURFACE', 'CAMERA_FPV'];
+      arr = shuffle(arr.slice(0)).slice(3);
+      $.each(arr, function(i){
+        $('.e-spot-section').append($('<li />').load('/static/snippets/toplevelcategorypage/'+ arr[i] + '/middle-spot'+ (Math.floor(Math.random() * 3) + 1) +'-horizonhobby.html'));
+      });
+    }(window.jQuery));
+  </script>
+]]>
+</rcicomponent>
+</body>
+</components>

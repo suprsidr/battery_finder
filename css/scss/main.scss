@@ -1,0 +1,61 @@
+// We need to reset box-sizing before normalize
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import "normalize",
+  "foundation/settings";
+  
+//@import "foundation";
+
+// Or selectively include components
+ @import
+  "foundation/components/grid",
+//  "foundation/components/ie8-grid",
+//  "foundation/components/accordion",
+//  "foundation/components/alert-boxes",
+  "foundation/components/block-grid",
+//  "foundation/components/breadcrumbs",
+//  "foundation/components/button-groups",
+//  "foundation/components/buttons",
+//  "foundation/components/clearing",
+//  "foundation/components/dropdown",
+//  "foundation/components/dropdown-buttons",
+//  "foundation/components/flex-video",
+  "foundation/components/forms",
+//  "foundation/components/icon-bar",
+//  "foundation/components/inline-lists",
+//  "foundation/components/joyride",
+//  "foundation/components/keystrokes",
+//  "foundation/components/labels",
+//  "foundation/components/magellan",
+//  "foundation/components/orbit",
+//  "foundation/components/pagination",
+//  "foundation/components/panels",
+//  "foundation/components/pricing-tables",
+//  "foundation/components/progress-bars",
+//  "foundation/components/range-slider",
+//  "foundation/components/reveal",
+//  "foundation/components/side-nav",
+//  "foundation/components/split-buttons",
+//  "foundation/components/sub-nav",
+//  "foundation/components/switches",
+  "foundation/components/tables",
+//  "foundation/components/tabs",
+//  "foundation/components/thumbs",
+//  "foundation/components/tooltips",
+//  "foundation/components/top-bar",
+  "foundation/components/type",
+//  "foundation/components/offcanvas",
+  "foundation/components/visibility";
+
+//  "fancybox"
+
+html, body {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
+}
