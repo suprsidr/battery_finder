@@ -9,7 +9,6 @@ module.exports = function(grunt) {
         },
         files: {
           'build/js/battery-finder.min.js': 'js/main.js',
-	        'build/js/minimongo.min.js': 'js/vendor/minimongo.js',
           'build/js/jquery.dataTables.min.js': 'js/vendor/jquery.dataTables.js',
           'build/js/jquery.qtip.min.js': 'js/vendor/jquery.qtip.js'
         }
