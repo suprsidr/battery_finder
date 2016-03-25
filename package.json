@@ -1,6 +1,7 @@
 {
   "name": "battery_finder",
-  "version": "0.0.3",
+  "productName": "HH.com and ForceRC.com",
+  "version": "0.0.4",
   "repository": "https://github.com/suprsidr/battery_finder.git",
   "devDependencies": {
     "datatables": "^1.10.7",
