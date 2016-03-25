@@ -130,7 +130,7 @@ jQuery(function(){
       $.each(res, function() {
         // our dataTable is expecting an array arrays of entries in the same order you setup the columns
         data.products.push([
-          '<div class="small-12 large-6 columns text-center"><a href="http://www.horizonhobby.com/'+this.ProdID+'">' + this.ProdID +
+          '<div class="small-12 large-6 columns text-center"><a href="http://www.forcerc.com/'+this.ProdID+'">' + this.ProdID +
           '</a></div><div class="small-12 large-6 columns text-center hide-for-small"><a class="img-ico" href="' + this.ProdID +
           '"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABGklEQVRYhe2X223CQBBFtwSXkBIoYbRn9p8S6CSUQAehA1qgA0rAHZAO4CM2svzaWSEPkGSk+bBk+x7fvZr1hvDnS1UFOKvq1bMbTQlA7S3ehQjtxROc/9H9lQDADjg36/zpCgDsRtZ76wagqt+jYXsyQP0wgKpKjHFjuG+7yBK08yKltLJAAHXzzEC8GKD7VcBFRKochAHSBiAiFXDpWXpyAwD2E2P0q1QU2BcBqKrMzXJLKEO4u3jo6lgBjrkNJRdKEalU9dTXyQLEGDfGHW0ylCmlVT8/JoCJ4M31IJTAeuwdJoCJYZJz4h7KOfeyACLyUSpe0lkAS/CWBlhM/B/gPQC86qUABr9QXg3U7dHM/XTUaIq3869XN/O/cf3fElPRAAAAAElFTkSuQmCC"></a></div>',
           this.BrandName,
@@ -241,7 +241,7 @@ jQuery(function(){
       Attributes: 1
     });
   $.ajax({
-    url: 'http://159.203.116.76/search/' + q + '/0/' + s + '/' + f + '?callback=?',
+    url: 'http://159.203.116.76/forcerc/search/' + q + '/0/' + s + '/' + f + '?callback=?',
     type: 'GET',
     dataType: 'json',
     success: function (data) {
