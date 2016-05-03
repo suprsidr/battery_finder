@@ -1,3 +1,9 @@
+/**
+ * @author wpatterson
+ * is processed with browserify
+ *
+ * NOT CURRENTLY USED
+ */
 global.$ = global.jQuery = require('jquery');
 global._ = require('lodash');
 require('dataTables');
@@ -109,6 +115,7 @@ jQuery(function(){
   // end document events
 
   function _buildQuery() {
+    // query expects an array of queries for $and statement
     var q = [];
     $('.battery-filters select').each(function() {
       var el = $(this);
@@ -142,6 +149,7 @@ jQuery(function(){
       }
     });
   }
+  // update filters dropdowns to reflect current options based on current selections
   function _updateFilters(data) {
     _scrubData(data);
     $('.battery-filters select').not(me).each(function() {
@@ -157,6 +165,7 @@ jQuery(function(){
     $('.results-count').html('<h3>Results: '+data.length+'</h3>');
     $('.socket').html('<table id="results" class="display"></table>');
 
+    // dataTables plugin is expecting array with column titles
     $('#results').dataTable({
       "data" : data.products,
       "columns" : [{
@@ -243,6 +252,7 @@ jQuery(function(){
     type: 'GET',
     dataType: 'json',
     success: function (data) {
+      // help messages - supplied by Gary
       var attsTextMaps = {};
       attsTextMaps[atts[0]] = 'Batteries for RC vehicles come in many different chemical types, each with their own strengths. Different chemical types do have different performance advantages, so make sure you select the proper battery for your electronics. Lithium Polymer (LiPo) and Nickel Metal Hydride (NiMH) tend to be the most common but there are many different options for you to choose from.';
       attsTextMaps[atts[1]] = 'Capacity is a measure of how long a battery will last per-charge. The higher the capacity the longer a battery will last before needing to be recharged.  You can always safely increase the capacity on your battery to gain more runtime or flight time.';
